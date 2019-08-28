@@ -25,7 +25,7 @@ def register(request):
     if len(errors) > 0:
         for key, value in errors.items():
             messages.error(request, value)
-        return redirect('/')
+        return redirect('/pre_login')
     else:
         plain_text_password = request.POST['password']
         plain_text_conf_password = request.POST['confirmation_password']
